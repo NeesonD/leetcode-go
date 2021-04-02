@@ -3,5 +3,9 @@ package _567_checkInclusion
 import "testing"
 
 func TestT(t *testing.T) {
-	checkInclusion("ab","eidbaooo")
+	a := []int{1, 2}
+	b := make([]int, len(a))
+	copy(b, a)
+
+	checkInclusion("ab", "eidbaooo")
 }
