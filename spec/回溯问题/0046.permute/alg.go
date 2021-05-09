@@ -11,10 +11,8 @@ func permute(nums []int) [][]int {
 
 func help(nums []int, choose []int) {
 	if len(nums) == len(choose) {
-		tmp := make([]int, 0, len(choose))
-		for _, i := range choose {
-			tmp = append(tmp, i)
-		}
+		tmp := make([]int, len(choose))
+		copy(tmp, choose)
 		result = append(result, tmp)
 		return
 	}

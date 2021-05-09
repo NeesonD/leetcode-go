@@ -11,10 +11,8 @@ func combine(n int, k int) [][]int {
 
 func help(n int, k int, record []int, choose int) {
 	if len(record) == k {
-		tmp := make([]int, 0, k)
-		for _, i := range record {
-			tmp = append(tmp, i)
-		}
+		tmp := make([]int, k)
+		copy(tmp, record)
 		result = append(result, tmp)
 		return
 	}
