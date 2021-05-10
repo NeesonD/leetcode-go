@@ -1,4 +1,4 @@
-package _004_lengthOfLongestSubstring
+package _003_lengthOfLongestSubstring
 
 import "testing"
 

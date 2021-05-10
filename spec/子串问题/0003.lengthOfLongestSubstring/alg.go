@@ -1,4 +1,4 @@
-package _004_lengthOfLongestSubstring
+package _003_lengthOfLongestSubstring
 
 import "math"
 
@@ -11,10 +11,10 @@ func lengthOfLongestSubstring(s string) int {
 	var left, right int
 	var result int
 	for i := range s {
-		window[s[i]] ++
+		window[s[i]]++
 		right++
 		for check(window) {
-			window[s[left]] --
+			window[s[left]]--
 			left++
 		}
 		result = int(math.Max(float64(result), float64(right-left)))

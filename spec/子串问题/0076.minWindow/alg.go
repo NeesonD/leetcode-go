@@ -8,18 +8,18 @@ func minWindow(s string, t string) string {
 	window := make(map[uint8]int)
 	need := make(map[uint8]int)
 	for i := range t {
-		need[t[i]] ++
+		need[t[i]]++
 	}
 	var result string
 	var left, right int
 	for x := range s {
-		window[s[x]] ++
+		window[s[x]]++
 		right++
 		for in(window, need) {
-			if len(result) == 0 || (right-left < len(result) && len(result) != 0) {
+			if len(result) == 0 || right-left < len(result) {
 				result = s[left:right]
 			}
-			window[s[left]] --
+			window[s[left]]--
 			left++
 		}
 	}
